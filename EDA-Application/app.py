@@ -30,7 +30,8 @@ if uploaded_file is not None:
         return csv
     df = load_csv()
 
-    pr = ProfileReport(df, explorative=True)
+    # pr = ProfileReport(df, explorative=True)
+    pr = df.profile_report()
     st.header('**Input DataFrame**')
     st.markdown("""
     Dataframe table at a glance
