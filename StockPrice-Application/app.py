@@ -50,7 +50,7 @@ st.info(company_summary)
 
 
 #  Bollinger bands
-st.header('**Bollinger Bands**')
+st.header('**Market Trends**')
 qf=cf.QuantFig(tickerDf,title='Market Chart',legend='top',name='GS',up_color='green', down_color='red')
 qf.add_bollinger_bands(periods=20, boll_std=2, colors=['cyan','grey'], fill=True,)
 qf.add_volume(name='Volume',up_color='green', down_color='red')
