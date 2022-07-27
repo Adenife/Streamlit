@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 
-st.set_page_config(page_title="Stock App", page_icon=":shark:", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Stock App", page_icon=":chart_with_upwards_trend:", layout="wide", initial_sidebar_state="collapsed")
 
 # Title
 st.markdown('''
