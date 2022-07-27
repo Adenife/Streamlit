@@ -32,6 +32,8 @@ tickerDf = tickerData.history(period='1d', start=start_date, end=end_date)
 st.sidebar.markdown("""
 This application is built using Python and Streamlit by: 
 [Aweda Oluwanifemi](https://www.linkedin.com/in/oluwanifemi-aweda-2b9206118/)
+
+\nIdea from [Data Professor](http://youtube.com/dataprofessor)
 """)
 
 
@@ -55,7 +57,6 @@ st.markdown('**Business Summary**')
 st.info(tickerData.info['longBusinessSummary'])
 
 
-
 fundInfo1 = {
     'Enterprise Value (USD)': tickerData.info['enterpriseValue'],
     'Enterprise To Revenue Ratio': tickerData.info['enterpriseToRevenue'],
@@ -63,9 +64,17 @@ fundInfo1 = {
     'Net Income (USD)': tickerData.info['netIncomeToCommon'],
     'Profit Margin Ratio': tickerData.info['profitMargins'],
     'Forward PE Ratio': tickerData.info['forwardPE'],
+    'Payout Ratio': tickerData.info['payoutRatio'],
+    "Current Ratio": tickerData.info['currentRatio'],
+    "Quick Ratio": tickerData.info['quickRatio'],
+    "Return on Asset": tickerData.info['returnOnAssets'],
+    "Gross Profit Margin": tickerData.info['grossMargins'],
 }
 
 fundInfo2 = {
+    "Operating Profit Margin": tickerData.info['operatingMargins'],
+    "Debt to Equity": tickerData.info['debtToEquity'],
+    "Return on Equity": tickerData.info['returnOnEquity'],
     'PEG Ratio': tickerData.info['pegRatio'],
     'Price to Book Ratio': tickerData.info['priceToBook'],
     'Forward EPS (USD)': tickerData.info['forwardEps'],
@@ -74,15 +83,16 @@ fundInfo2 = {
     'Dividend Rate (%)': tickerData.info['dividendRate'], 
     'Dividend Yield (%)': tickerData.info['dividendYield'],
     'Five year Avg Dividend Yield (%)': tickerData.info['fiveYearAvgDividendYield'],
-    'Payout Ratio': tickerData.info['payoutRatio']
+    
 }
 
+
+st.subheader('Fundamental Information') 
 col3, col4 = st.columns(2)
 
 with col3:
     fundDF1 = pd.DataFrame.from_dict(fundInfo1, orient='index')
     fundDF1 = fundDF1.rename(columns={0: 'Value'})
-    st.subheader('Fundamental Information') 
     st.table(fundDF1)
 
 with col4:
@@ -92,7 +102,7 @@ with col4:
 
 
 #  Bollinger bands
-st.header('**Bollinger Bands**')
+st.subheader('Bollinger Bands')
 qf=cf.QuantFig(tickerDf,title='Market Trend',legend='top',name='GS',up_color='green', down_color='red')
 qf.add_bollinger_bands(periods=20, boll_std=2, colors=['cyan','grey'], fill=True,)
 qf.add_volume(name='Volume',up_color='green', down_color='red')
