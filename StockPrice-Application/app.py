@@ -32,8 +32,6 @@ tickerDf = tickerData.history(period='1d', start=start_date, end=end_date)
 st.sidebar.markdown("""
 This application is built using Python and Streamlit by: 
 [Aweda Oluwanifemi](https://www.linkedin.com/in/oluwanifemi-aweda-2b9206118/)
-
-\nIdea from [Data Professor](http://youtube.com/dataprofessor)
 """)
 
 
