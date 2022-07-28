@@ -79,7 +79,7 @@ with st.container():
                 
                 **Check me out on [LinkedIn](https://www.linkedin.com/in/oluwanifemi-aweda-2b9206118/)**
 
-                *My nterests include: music, volleyball, home exercising, travelling, cooking, volunteering, mentoring, tech innovation, STEM education.*
+                *My interests include: music, volleyball, home exercising, travelling, cooking, volunteering, mentoring, tech innovation, STEM education.*
             """
         )
     
@@ -140,7 +140,7 @@ with st.container():
         st_lottie(edaApp, key="eda", height=300)
         st.markdown('<div style="text-align: center;"><a style="text-decoration: none; color: white" href="https://adenife-streamlit-eda-applicationapp-lldgdx.streamlitapp.com/"><h3>EDA Application</h3></a></div>', unsafe_allow_html=True)
         st.info("""
-            A simple Eploratory Data Analysis (EDA) tool in python usinng the *streamlit* library. The *streamlit* library helps to build application with little code purely in python. Upload a dataset (.csv file) and watch the magic happen. Have fun!!!
+            A simple Exploratory Data Analysis (EDA) tool in python using the *streamlit* library. The *streamlit* library helps to build applications with little code purely in python. Upload a dataset (.csv file) and watch the magic happen. Have fun!!!
             Try out my EDA application [here](https://adenife-streamlit-eda-applicationapp-lldgdx.streamlitapp.com/).
         """)
 
@@ -184,7 +184,7 @@ with st.container():
         st_lottie(flaskRepo, key="flask", height=300)
         st.markdown('<div style="text-align: center;"><a style="text-decoration: none; color: white" href="https://github.com/Adenife/Flask"><h3>Flask Code Repository</h3></a></div>', unsafe_allow_html=True)
         st.info("""
-            Flask is one of the major python web framworks. This means that flask provides you with tools, libraries and technologies that allow you to build a web application. Flask is often referred to as a micro framework, but can be scalable because of it's flexibility. Flask comes with some standard functionalities and allows developers to add any number of libraries or plugins for an extension.
+            Flask is one of the major python web frameworks. This means that flask provides you with tools, libraries and technologies that allows you to build a web application. Flask is often referred to as a micro framework, but can be scalable because of it's flexibility. Flask comes with some standard functionalities and allows developers to add any number of libraries or plugins for an extension.
             Checkout my flask repository [here](https://github.com/Adenife/Flask).
         """)
 
@@ -196,7 +196,7 @@ with st.container():
         st_lottie(covidAnalysis, key="sql1", height=300)
         st.markdown('<div style="text-align: center;"><a style="text-decoration: none; color: white" href="https://github.com/Adenife/Data-Analysis/blob/main/SQL/covidAnalysis.sql"><h3>Covid-19 Analysis</h3></a></div>', unsafe_allow_html=True)
         st.info("""
-            COVID-19 made the worl go on lockdown, so why not analyze how it affected different countries and how these countries were able to contain it?. In this SQL analysis peoject I dived into the Covid dataset to find insight on it's impact in various parts of the world. Skills used include Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types. 
+            COVID-19 made the world go on lockdown, so why not analyze how it affected different countries and how these countries were able to contain it?. In this SQL analysis peoject I dived into the Covid dataset to find insight on it's impact in various parts of the world. Skills used include Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types. 
             Taka a look [here](https://github.com/Adenife/Data-Analysis/blob/main/SQL/covidAnalysis.sql).
         """)
 
