@@ -3,6 +3,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 # from PIL import Image
 import base64
+import os
 
 st.set_page_config(page_title="My Portfolio", page_icon=":computer:", layout="wide")
 
@@ -26,7 +27,9 @@ def show_pdf(file_path):
     pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
     st.markdown(pdf_display, unsafe_allow_html=True)
 
-local_css("style/style.css")
+path_labels = os.getcwd() + 'style/style.css'
+local_css(path_labels)
+
 
 # edaApp = Image.open("images/edaApp.jpg")
 # financeApp = Image.open("images/financeApp.jpg")
@@ -82,11 +85,12 @@ with st.container():
         st_lottie(lottie_dataAnalysis, key="analysis", height=350)
 
 
+pdfPath = path_labels = os.getcwd() + "Oluwanifemi Aweda's Resume.pdf"
 # Resume
 with st.container():
     viewResume, downloadResume, otherColumn1, otherColumn2, otherColumn3, otherColumn4 = st.columns(6)
     with viewResume:
-        with open("Oluwanifemi Aweda's Resume.pdf", "rb") as pdf_file:
+        with open(pdfPath, "rb") as pdf_file:
             PDFbyte = pdf_file.read()
 
         st.download_button(label="Download My Resume",  data=PDFbyte, file_name="Oluwanifemi Aweda's Resume.pdf", mime='application/octet-stream', help='Download Resume File')
@@ -99,7 +103,7 @@ with st.container():
             st.markdown(pdf_display, unsafe_allow_html=True)
 
         if st.button('  View My Resume  ', key='1', help='Open PDF File Here'):            
-                show_pdf("Oluwanifemi Aweda's Resume.pdf")
+                show_pdf(pdfPath)
 
     with otherColumn1:
         st.button('Close Resume View', key='2', help='Close the PDF View')
