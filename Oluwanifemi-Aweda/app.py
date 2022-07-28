@@ -27,8 +27,9 @@ def show_pdf(file_path):
     pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
     st.markdown(pdf_display, unsafe_allow_html=True)
 
-# path_labels = os.getcwd() + '/style/style.css'
-path_labels = "https://github.com/Adenife/Streamlit/tree/main/Oluwanifemi-Aweda/style"
+
+path = os.path.dirname(__file__)
+path_labels = path+'/style/style.css'
 local_css(path_labels)
 
 
@@ -86,7 +87,7 @@ with st.container():
         st_lottie(lottie_dataAnalysis, key="analysis", height=350)
 
 
-pdfPath = path_labels = os.getcwd() + "/Oluwanifemi Aweda's Resume.pdf"
+pdfPath = path+"/Oluwanifemi Aweda's Resume.pdf"
 # Resume
 with st.container():
     viewResume, downloadResume, otherColumn1, otherColumn2, otherColumn3, otherColumn4 = st.columns(6)
