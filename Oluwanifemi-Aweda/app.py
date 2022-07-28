@@ -26,7 +26,7 @@ def show_pdf(file_path):
     pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
     st.markdown(pdf_display, unsafe_allow_html=True)
 
-local_css("style.css")
+local_css("style/style.css")
 
 # edaApp = Image.open("images/edaApp.jpg")
 # financeApp = Image.open("images/financeApp.jpg")
