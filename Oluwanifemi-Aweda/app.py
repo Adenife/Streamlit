@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 # from PIL import Image
 import base64
-# import os
+import os
 import smtplib
 import ssl
 
@@ -33,7 +33,7 @@ def show_pdf(file_path):
     st.markdown(pdf_display, unsafe_allow_html=True)
 
 
-# path = os.path.dirname(__file__)
+path = os.path.dirname(__file__)
 # path_labels = path+'/style/style.css'
 # local_css(path_labels)
 
