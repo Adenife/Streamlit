@@ -3,7 +3,12 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 # from PIL import Image
 import base64
-import os
+# import os
+import smtplib
+import ssl
+
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 st.set_page_config(page_title="My Portfolio", page_icon=":computer:", layout="wide")
 
@@ -28,9 +33,9 @@ def show_pdf(file_path):
     st.markdown(pdf_display, unsafe_allow_html=True)
 
 
-path = os.path.dirname(__file__)
-path_labels = path+'/style/style.css'
-local_css(path_labels)
+# path = os.path.dirname(__file__)
+# path_labels = path+'/style/style.css'
+# local_css(path_labels)
 
 
 # edaApp = Image.open("images/edaApp.jpg")
@@ -210,25 +215,70 @@ with st.container():
 
 
 # Contact
+# with st.container():
+#     st.write("---")
+#     st.markdown('<div style="text-align: center;"><h2>Get in Touch With Me!</h2></div>', unsafe_allow_html=True)
+#     st.write("##")
+
+#     # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
+#     contact_form = """
+#     <form style=" width: 50vw; margin-left : 25vw; action="https://formspree.io/f/mwkzeenv" method="POST">
+#         <input type="email" name="email" placeholder="Your email" required>
+#         <textarea name="message" placeholder="Your message here" required></textarea>
+#         <button type="submit">Send</button>
+#     </form>
+#     """
+
+#     # st.markdown(contact_form, unsafe_allow_html=True)
+#     left_column, center_column, right_column = st.columns(3)
+#     with left_column:
+#         st.empty()
+#     with center_column:
+#         st.markdown(contact_form, unsafe_allow_html=True)
+#     with right_column:
+#         st.empty()
+
+
 with st.container():
-    st.write("---")
-    st.markdown('<div style="text-align: center;"><h2>Get in Touch With Me!</h2></div>', unsafe_allow_html=True)
-    st.write("##")
+    left, main, right = st.columns(3)
 
-    # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
-    contact_form = """
-    <form style=" width: 50vw; margin-left : 25vw; action="https://formspree.io/f/mwkzeenv" method="POST">
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Your message here" required></textarea>
-        <button type="submit">Send</button>
-    </form>
-    """
-
-    # st.markdown(contact_form, unsafe_allow_html=True)
-    left_column, center_column, right_column = st.columns(3)
-    with left_column:
+    with left:
         st.empty()
-    with center_column:
-        st.markdown(contact_form, unsafe_allow_html=True)
-    with right_column:
+
+    with main:
+        with st.form(key="send_mail", clear_on_submit=True):
+            st.write("---")
+            st.markdown('<div style="text-align: center;"><h2>Get in Touch With Me!</h2></div>', unsafe_allow_html=True)
+            sender_name = st.text_input(label='Your Name')
+            sender_mail = st.text_input(label='Your Mail')
+            email_body = st.text_area(label='Your Message Here...')
+
+            # Define the transport variables
+            ctx = ssl.create_default_context()
+            password = "gcddbwbizvmvduku"    # Your app password goes here
+            sender = "awedaoluwanifemi@gmail.com"    # Your e-mail address
+            receiver = "awedaoluwanifemi@gmail.com" # Recipient's address
+
+            # Create the message
+            message = MIMEMultipart("alternative")
+            message["Subject"] = sender_name + " -- " + sender_mail
+            message["From"] = sender
+            message["To"] = receiver
+
+            # Plain text alternative version
+            plain = email_body
+            message.attach(MIMEText(plain, "plain"))      
+                
+            # Every form must have a submit button.
+            submitted = st.form_submit_button("Submit")
+            if submitted:
+                # Connect with server and send the message
+                with smtplib.SMTP_SSL("smtp.gmail.com", port=465, context=ctx) as server:
+                    server.login(sender, password)
+                    server.sendmail(sender, receiver, message.as_string())
+
+                st.success("Mail Successfully Sent!!!")
+
+
+    with right:
         st.empty()
