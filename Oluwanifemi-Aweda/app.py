@@ -249,7 +249,7 @@ with st.container():
 
 
 with st.container():
-    left, main, right = st.columns(3)
+    left, main, right = st.columns([1,3,1])
 
     with left:
         st.empty()
