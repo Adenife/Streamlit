@@ -123,7 +123,7 @@ with st.container():
 #                 show_pdf(pdfPath)
 
     with otherColumn1:
-        st.empty
+        st.empty()
 #         st.button('Close Resume View', key='2', help='Close the PDF View')
 
     with otherColumn2:
