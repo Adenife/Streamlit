@@ -104,25 +104,27 @@ with st.container():
 pdfPath = path+"/Oluwanifemi Aweda's Resume.pdf"
 # Resume
 with st.container():
-    viewResume, downloadResume, otherColumn1, otherColumn2, otherColumn3, otherColumn4 = st.columns(6)
-    with viewResume:
+    downloadResume, viewResume, otherColumn1, otherColumn2, otherColumn3, otherColumn4 = st.columns(6)
+    with downloadResume:
         with open(pdfPath, "rb") as pdf_file:
             PDFbyte = pdf_file.read()
 
         st.download_button(label="Download My Resume",  data=PDFbyte, file_name="Oluwanifemi Aweda's Resume.pdf", mime='application/octet-stream', help='Download Resume File')
                        
-    with downloadResume:
-        def show_pdf(file_path):
-            with open(file_path,"rb") as f:
-                base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-            pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
-            st.markdown(pdf_display, unsafe_allow_html=True)
+    with viewResume:
+        st.empty()
+#         def show_pdf(file_path):
+#             with open(file_path,"rb") as f:
+#                 base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+#             pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
+#             st.markdown(pdf_display, unsafe_allow_html=True)
 
-        if st.button('  View My Resume  ', key='1', help='Open PDF File Here'):            
-                show_pdf(pdfPath)
+#         if st.button('  View My Resume  ', key='1', help='Open PDF File Here'):            
+#                 show_pdf(pdfPath)
 
     with otherColumn1:
-        st.button('Close Resume View', key='2', help='Close the PDF View')
+        st.empty
+#         st.button('Close Resume View', key='2', help='Close the PDF View')
 
     with otherColumn2:
         st.empty()
