@@ -1,7 +1,7 @@
 import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
-# from PIL import Image
+from PIL import Image
 import base64
 import os
 import smtplib
@@ -37,7 +37,10 @@ path = os.path.dirname(__file__)
 # path_labels = path+'/style/style.css'
 # local_css(path_labels)
 
+my_image_path = path+'/style/profile-pics.png'
 
+
+my_image = Image.open(my_image_path)
 # edaApp = Image.open("images/edaApp.jpg")
 # financeApp = Image.open("images/financeApp.jpg")
 # flaskRepo = Image.open("images/flaskRepo.jpg")
@@ -59,11 +62,17 @@ lottie_dataAnalysis = load_lottieurl("https://assets4.lottiefiles.com/packages/l
 
 # Header Section
 with st.container():
-    st.subheader("Hi, I am Oluwanifemi :wave:")
-    st.title("A Data Analyst from Nigeria!")
-    st.write("""I am curious and passionate about data. I explore datasets to derive insights and drive decisions. 
-    I have excellent understanding and proficiency of tools and platforms for effective data analysis, data mining, data visualization, and software engineering. 
-    I am passionate about the sustainable development goals most especially the alleviation of poverty in Africa, Nigeria precisely(SDG 1).""")
+    image, text = st.columns([1,2])
+
+    with image:
+        st.image(my_image, width=250)
+
+    with text:
+        st.subheader("Hi, I am Oluwanifemi :wave:")
+        st.title("A Data Analyst from Nigeria!")
+        st.write("""I am curious and passionate about data. I explore datasets to derive insights and drive decisions. 
+        I have excellent understanding and proficiency of tools and platforms for effective data analysis, data mining, data visualization, and software engineering. 
+        I am passionate about the sustainable development goals most especially the alleviation of poverty in Africa, Nigeria precisely(SDG 1).""")
 
 
 # What I Do
