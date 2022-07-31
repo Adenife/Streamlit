@@ -69,7 +69,7 @@ with st.container():
 
     with text:
         st.subheader("Hi, I am Oluwanifemi :wave:")
-        st.title("A Data Analyst from Nigeria!")
+        st.header("A Passionate and Professional Data Analyst!")
         st.write("""I am curious and passionate about data. I explore datasets to derive insights and drive decisions. 
         I have excellent understanding and proficiency of tools and platforms for effective data analysis, data mining, data visualization, and software engineering. 
         I am passionate about the sustainable development goals most especially the alleviation of poverty in Africa, Nigeria precisely(SDG 1).""")
@@ -189,7 +189,7 @@ with st.container():
         st_lottie(googleCapstone, key="capstone", height=300)
         st.markdown('<div style="text-align: center;"><a style="text-decoration: none; color: white" href="https://github.com/Adenife/Data-Analysis/blob/main/Google%20Capstone%20Case%201/How%20Does%20a%20Bike-Share%20Navigate%20Speedy%20Success_.pdf"><h3>Bike Share Analysis</h3></a></div>', unsafe_allow_html=True)
         st.info("""
-            This analysis was done to fulfill the requirements for getting the google data analytics certification hosted on coursera. The case study involves a bikeshare companys data of its customers trip details over a 12 month period (June 2021 - May 2022). The analysis follows the 6 phases of the Data Analysis process as a guideline which includes the; Ask, Prepare, Process, Analyze, and Act phases.
+            This Project was done to fulfill the requirements for getting the google data analytics certification hosted on coursera. The case study involves a bikeshare companys data of its customers trip details over a 12 month period (June 2021 - May 2022). The analysis follows the 6 phases of the Data Analysis process as a guideline which includes the; Ask, Prepare, Process, Analyze, and Act phases ***(Using the R programming Language)***.
             Download my report [here](https://github.com/Adenife/Data-Analysis/blob/main/Google%20Capstone%20Case%201/How%20Does%20a%20Bike-Share%20Navigate%20Speedy%20Success_.pdf).
         """)
 
