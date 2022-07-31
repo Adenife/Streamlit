@@ -256,8 +256,8 @@ with st.container():
 
     with main:
         with st.form(key="send_mail", clear_on_submit=True):
-            st.write("---")
             st.markdown('<div style="text-align: center;"><h2>Get in Touch With Me!</h2></div>', unsafe_allow_html=True)
+            st.write("---")
             sender_name = st.text_input(label='Your Name')
             sender_mail = st.text_input(label='Your Mail')
             email_body = st.text_area(label='Your Message Here...')
