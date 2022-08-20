@@ -266,9 +266,9 @@ with st.container():
 
             # Define the transport variables
             ctx = ssl.create_default_context()
-            password = "gcddbwbizvmvduku"    # Your app password goes here
-            sender = "awedaoluwanifemi@gmail.com"    # Your e-mail address
-            receiver = "awedaoluwanifemi@gmail.com" # Recipient's address
+            password = st.secrets["password"]   # Your app password goes here
+            sender = st.secrets["sender"]    # Your e-mail address
+            receiver = st.secrets["receiver"]  # Recipient's address
 
             # Create the message
             message = MIMEMultipart("alternative")
