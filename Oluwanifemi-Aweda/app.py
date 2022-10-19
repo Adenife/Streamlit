@@ -167,10 +167,10 @@ with st.container():
     with sectionOne:
         # st.image(witcherAnalysis, use_column_width=True)
         st_lottie(witcherAnalysis, key="witcher", height=300)
-        st.markdown('<div style="text-align: center;"><a style="text-decoration: none; color: white" href="https://github.com/Adenife/Data-Analysis/blob/main/The%20witcher%20Analysis/witcherFinalAnalysisReport.ipynb"><h3>Witcher Analysis</h3></a></div>', unsafe_allow_html=True)
+        st.markdown('<div style="text-align: center;"><a style="text-decoration: none; color: white" href="https://nbviewer.org/github/Adenife/Data-Analysis/blob/main/The%20witcher%20Analysis/witcherFinalAnalysisReport.ipynb"><h3>Witcher Analysis</h3></a></div>', unsafe_allow_html=True)
         st.info("""
             This project aimed to see the relationship between characters in the witcher book series. Selenium was used to scrape the data from the witcher wiki webpage, spacy was majorly used for the analysis and pyvis was used to visualize the results. See how each character relates to each other in this mind blowing end-to-end project.
-            Taka a look [here](https://github.com/Adenife/Data-Analysis/blob/main/The%20witcher%20Analysis/witcherFinalAnalysisReport.ipynb).
+            Taka a look [here](https://nbviewer.org/github/Adenife/Data-Analysis/blob/main/The%20witcher%20Analysis/witcherFinalAnalysisReport.ipynb).
         """)
 
     with sectionTwo:
