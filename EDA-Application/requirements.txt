@@ -3,7 +3,6 @@ attrs==23.1.0
 blinker==1.6.2
 cachetools==5.3.1
 certifi==2023.7.22
-charset-normalizer==3.2.0
 fonttools==4.42.0
 gitdb==4.0.10
 GitPython==3.1.32
