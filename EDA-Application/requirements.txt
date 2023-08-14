@@ -2,7 +2,6 @@ altair==5.0.1
 attrs==23.1.0
 blinker==1.6.2
 cachetools==5.3.1
-certifi==2023.7.22
 fonttools==4.42.0
 gitdb==4.0.10
 GitPython==3.1.32
