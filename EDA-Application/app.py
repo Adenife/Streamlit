@@ -11,6 +11,7 @@ st.markdown('''
 This is an **Exploratory Data Analysis (EDA) Application** created in Streamlit using the **pandas-profiling** library.
 ''')
 
+
 # Upload CSV data
 with st.sidebar.header('Upload your CSV data file'):
     uploaded_file = st.sidebar.file_uploader("Upload file to analyze", type=["csv"])
@@ -22,6 +23,7 @@ This application is built using Python and Streamlit by:
 \nTutorials from [Chanin Nantasenamat](https://medium.com/@chanin.nantasenamat) (aka [Data Professor](http://youtube.com/dataprofessor))
 """)
 
+
 # Pandas Profiling Report
 if uploaded_file is not None:
     @st.cache
@@ -30,7 +32,7 @@ if uploaded_file is not None:
         return csv
     df = load_csv()
 
-    # pr = ProfileReport(df, explorative=True)
+    import pandas_profiling
     pr = df.profile_report()
     st.header('**Input DataFrame**')
     st.markdown("""
@@ -41,3 +43,4 @@ if uploaded_file is not None:
     st.write('---')
     st.header('**Pandas Profiling Report**')
     st_profile_report(pr)
+
