@@ -455,10 +455,10 @@ with st.container():
                     server.login(sender, password)
                     server.sendmail(sender, receiver, message.as_string())
 
-                st.success("Mail Successfully Sent!!!", icon="✅")
+                st.success("Mail Successfully Sent!!!")
 
             else:
-                st.warning("Fill in the information correctly", icon="⚠️")
+                st.warning("Fill in the information correctly")
 
     with right:
         st.empty()
