@@ -167,7 +167,7 @@ sePath = path + "/Full Resume SE.pdf"
 with st.container():
     st.write("---")
     analysis, software, engineering = st.tabs(
-        ["Data Analysis", "Software Engineering", "Data Engineering"]
+        ["Data Analysis", "Software Engineering (Backend)", "Data Engineering"]
     )
 
     with analysis:
