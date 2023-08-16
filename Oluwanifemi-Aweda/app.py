@@ -105,7 +105,7 @@ with st.container():
                 - Data modeling and ETL development📉.
                 - Machine learning (Regression, Classification, Time series, and Clustering)🤖.
                 - Proficient in SQL, Python, Tableau, and Excel🐍. 
-                - I serve as a mentor and tech trainer at Matadors Leadership Institute and D-Pedagogic Hub.
+                - I serve as a mentor and tech trainer at Data Analytics Elite Community, Matadors Leadership Institute, and D-Pedagogic Hub.
                 
                 *In my career journey, I have had the privilege of wearing multiple hats, undertaking diverse roles that encompass data analysis, software engineering, and data engineering. This dynamic blend of responsibilities has enabled me to develop a comprehensive skill set and a unique perspective on how these interconnected disciplines can mutually reinforce and enhance one another.*
             """
