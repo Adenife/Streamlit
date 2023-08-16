@@ -200,17 +200,17 @@ with st.container():
 
             with linkedin:
                 st.write(
-                    "**------------------ -----[LinkedIn](https://www.linkedin.com/in/oluwanifemi-aweda-2b9206118/)-----**"
+                    "**[LinkedIn](https://www.linkedin.com/in/oluwanifemi-aweda-2b9206118/)**"
                 )
 
             with github:
                 st.write(
-                    "------------------ ------**[GitHub](https://github.com/Adenife)------**"
+                    "-**[GitHub](https://github.com/Adenife)**"
                 )
 
             with tableau:
                 st.write(
-                    "**------------------ ------[Tableau](https://public.tableau.com/app/profile/aweda.oluwanifemi.adeola)-----**"
+                    "**[Tableau](https://public.tableau.com/app/profile/aweda.oluwanifemi.adeola)**"
                 )
 
             with otherColumn3:
