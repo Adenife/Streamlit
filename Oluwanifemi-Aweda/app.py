@@ -205,7 +205,7 @@ with st.container():
 
             with github:
                 st.write(
-                    "-**[GitHub](https://github.com/Adenife)**"
+                    "**[GitHub](https://github.com/Adenife)**"
                 )
 
             with tableau:
