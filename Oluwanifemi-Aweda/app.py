@@ -105,7 +105,7 @@ with st.container():
                 - Data modeling and ETL development📉.
                 - Machine learning (Regression, Classification, Time series, and Clustering)🤖.
                 - Proficient in SQL, Python, Tableau, and Excel🐍. 
-                - I serve as a mentor and tech trainer at Data Analytics Elite, Matadors Leadership Institute, and D-Pedagogic Hub.
+                - I serve as a mentor and tech trainer at Matadors Leadership Institute and D-Pedagogic Hub.
                 
                 *In my career journey, I have had the privilege of wearing multiple hats, undertaking diverse roles that encompass data analysis, software engineering, and data engineering. This dynamic blend of responsibilities has enabled me to develop a comprehensive skill set and a unique perspective on how these interconnected disciplines can mutually reinforce and enhance one another.*
             """
@@ -204,9 +204,7 @@ with st.container():
                 )
 
             with github:
-                st.write(
-                    "**[GitHub](https://github.com/Adenife)**"
-                )
+                st.write("**[GitHub](https://github.com/Adenife)**")
 
             with tableau:
                 st.write(
@@ -320,10 +318,98 @@ with st.container():
             "💻 With a solid foundation in software engineering, I possess the technical prowess to design and develop robust, scalable solutions. I am adept at leveraging programming languages and frameworks to create innovative software applications that streamline operations, optimize efficiency, and enhance user experiences. My coding expertise empowers me to bridge the gap between software development and data-driven decision-making, resulting in solutions that are both technically sound and business-driven."
         )
 
+        st.write("---")
+
+        with st.container():
+            (
+                otherColumn3,
+                downloadResume,
+                linkedin,
+                github,
+                tableau,
+                otherColumn4,
+            ) = st.columns(6)
+            with downloadResume:
+                with open(sePath, "rb") as pdf_file:
+                    PDFbyte = pdf_file.read()
+
+                st.download_button(
+                    label="Download My Resume",
+                    data=PDFbyte,
+                    file_name="Oluwanifemi Aweda's Resume.pdf",
+                    mime="application/octet-stream",
+                    help="Download Resume File",
+                )
+
+            with linkedin:
+                st.write(
+                    "**[LinkedIn](https://www.linkedin.com/in/oluwanifemi-aweda-2b9206118/)**"
+                )
+
+            with github:
+                st.write("**[GitHub](https://github.com/Adenife)**")
+
+            with tableau:
+                st.write(
+                    "**[Tableau](https://public.tableau.com/app/profile/aweda.oluwanifemi.adeola)**"
+                )
+
+            with otherColumn3:
+                st.empty()
+
+            with otherColumn4:
+                st.empty()
+
+        st.write("---")
+
     with engineering:
         st.write(
             "🔌 In the realm of data engineering, I have a strong command of the tools and technologies required to efficiently collect, transform, and store large volumes of data. Whether it involves architecting data pipelines, implementing ETL processes, or managing databases, I possess the know-how to ensure data integrity and availability. By seamlessly integrating data engineering practices, I enable organizations to harness the full potential of their data assets."
         )
+
+        st.write("---")
+
+        with st.container():
+            (
+                otherColumn3,
+                downloadResume,
+                linkedin,
+                github,
+                tableau,
+                otherColumn4,
+            ) = st.columns(6)
+            with downloadResume:
+                with open(dePath, "rb") as pdf_file:
+                    PDFbyte = pdf_file.read()
+
+                st.download_button(
+                    label="Download My Resume",
+                    data=PDFbyte,
+                    file_name="Oluwanifemi Aweda's Resume.pdf",
+                    mime="application/octet-stream",
+                    help="Download Resume File",
+                )
+
+            with linkedin:
+                st.write(
+                    "**[LinkedIn](https://www.linkedin.com/in/oluwanifemi-aweda-2b9206118/)**"
+                )
+
+            with github:
+                st.write("**[GitHub](https://github.com/Adenife)**")
+
+            with tableau:
+                st.write(
+                    "**[Tableau](https://public.tableau.com/app/profile/aweda.oluwanifemi.adeola)**"
+                )
+
+            with otherColumn3:
+                st.empty()
+
+            with otherColumn4:
+                st.empty()
+
+        st.write("---")
 
 
 with st.container():
@@ -369,10 +455,10 @@ with st.container():
                     server.login(sender, password)
                     server.sendmail(sender, receiver, message.as_string())
 
-                st.success("Mail Successfully Sent!!!")
+                st.success("Mail Successfully Sent!!!", icon="✅")
 
             else:
-                st.warning("Fill in the information correctly")
+                st.warning("Fill in the information correctly", icon="⚠️")
 
     with right:
         st.empty()
