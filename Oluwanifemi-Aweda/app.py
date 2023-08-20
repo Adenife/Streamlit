@@ -72,6 +72,9 @@ tableauTrading = load_lottieurl(
 lottie_dataAnalysis = load_lottieurl(
     "https://assets4.lottiefiles.com/packages/lf20_iv4dsx3q.json"
 )
+twitterBot = load_lottieurl(
+    "https://lottie.host/971e48ea-f06a-4896-a42c-dbfe9aad57ca/fVwOhnWw3i.json"
+)
 
 
 # Header Section
@@ -361,6 +364,38 @@ with st.container():
                 st.empty()
 
         st.write("---")
+
+        with st.container():
+            st.markdown(
+                '<div style="text-align: center;"><h3>Example Projects Worked On</h3></div>',
+                unsafe_allow_html=True,
+            )
+            sectionOne, sectionTwo = st.columns(2)
+
+            with sectionOne:
+                st_lottie(twitterBot, key="botornot", height=300)
+                st.markdown(
+                    '<div style="text-align: center;"><a style="text-decoration: none; color: white" href="https://github.com/Adenife/Twitter-BotOrNot"><h3>Twitter Bot or Not</h3></a></div>',
+                    unsafe_allow_html=True,
+                )
+                st.info(
+                    """
+                    A Twitter bot detection system using Python, Flask, and Scikit-learn. The project uses a machine learning model to predict whether a Twitter user is a bot or not and flask for API service to interact with the predictor. Check out the repo [here](https://github.com/Adenife/Twitter-BotOrNot).
+                """
+                )
+
+            with sectionTwo:
+                st_lottie(edaApp, key="eda", height=300)
+                st.markdown(
+                    '<div style="text-align: center;"><a style="text-decoration: none; color: white" href="https://adenife-streamlit-eda-applicationapp-lldgdx.streamlitapp.com/"><h3>EDA Application</h3></a></div>',
+                    unsafe_allow_html=True,
+                )
+                st.info(
+                    """
+                    A simple Exploratory Data Analysis (EDA) tool in python using the *streamlit* library. The *streamlit* library helps to build data applications with code written purely in python. Upload a dataset (.csv file) and watch the magic happen. Have fun!!!
+                    Try out my EDA application [here](https://adenife-streamlit-eda-applicationapp-lldgdx.streamlitapp.com/).
+                """
+                )
 
     with engineering:
         st.write(
