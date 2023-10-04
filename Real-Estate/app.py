@@ -4,6 +4,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
+import os
+
+path = os.path.dirname(__file__)
 
 
 # Setup for Storytelling (matplotlib):
@@ -29,7 +32,8 @@ plt.rcParams["ytick.major.size"] = 0
 
 
 # loading the data:
-BR_real_estate_appreciation = pd.read_csv("BR_real_estate_appreciation_Q1_2023.csv")
+csv_data = path + "/BR_real_estate_appreciation_Q1_2023.csv"
+BR_real_estate_appreciation = pd.read_csv(csv_data)
 # rounding the appreciation column to two decimal places:
 BR_real_estate_appreciation["Annual_appreciation"] = (
     round(BR_real_estate_appreciation["Annual_appreciation"], 2) * 100
@@ -290,11 +294,3 @@ st.markdown("---")
 # here you can add the authorship and useful links (e.g., Linkedin, GitHub, and so forth)
 st.markdown("---")
 # --- (End of the App)
-
-
-# [theme]
-# primaryColor="#00FF7F"
-# backgroundColor="#464545"
-# secondaryBackgroundColor="#2b2b29"
-# textColor="#fbfbfb"
-# font="serif"
