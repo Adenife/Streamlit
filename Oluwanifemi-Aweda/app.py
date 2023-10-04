@@ -410,7 +410,7 @@ with st.container():
                 )
                 st.info(
                     """
-                    A streamlit application for residential properties analyzer using Streamlit, Pandas, NumPy, Matplotlib, and Seaborn libraries. The app features 2 stripplots, the first stripplot, which compares the selected location's annual appreciation to other locations, and the second stripplot, which shows the relationship between location and price per square meter. Check out the repo [here](https://realestatebrazil.streamlit.app).
+                    A streamlit application for residential properties analyzer using Streamlit, Pandas, NumPy, Matplotlib, and Seaborn libraries. The app features 2 stripplots, the first stripplot, which compares the selected location's annual appreciation to other locations, and the second stripplot, which shows the relationship between location and price per square meter. Check out the project [here](https://realestatebrazil.streamlit.app).
                 """
                 )
 
