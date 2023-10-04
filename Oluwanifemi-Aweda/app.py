@@ -41,13 +41,7 @@ my_image_path = path + "/style/profile-pics.png"
 
 
 my_image = Image.open(my_image_path)
-# edaApp = Image.open("images/edaApp.jpg")
-# financeApp = Image.open("images/financeApp.jpg")
-# flaskRepo = Image.open("images/flaskRepo.jpg")
 edaApp = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_2b3k5idb.json")
-financeApp = load_lottieurl(
-    "https://assets8.lottiefiles.com/packages/lf20_z6scuqaw.json"
-)
 flaskRepo = load_lottieurl(
     "https://assets8.lottiefiles.com/packages/lf20_fvrs1qak.json"
 )
@@ -124,48 +118,6 @@ pdfPath = path + "/Full Resume All.pdf"
 daPath = path + "/Full Resume DA.pdf"
 dePath = path + "/Full Resume DE.pdf"
 sePath = path + "/Full Resume SE.pdf"
-# Resume
-# with st.container():
-#     (
-#         otherColumn3,
-#         downloadResume,
-#         linkedin,
-#         github,
-#         tableau,
-#         otherColumn4,
-#     ) = st.columns(6)
-#     with downloadResume:
-#         with open(pdfPath, "rb") as pdf_file:
-#             PDFbyte = pdf_file.read()
-
-#         st.download_button(
-#             label="Download My Resume",
-#             data=PDFbyte,
-#             file_name="Oluwanifemi Aweda's Resume.pdf",
-#             mime="application/octet-stream",
-#             help="Download Resume File",
-#         )
-
-#     with linkedin:
-#         st.write(
-#             "**------------------ -----[LinkedIn](https://www.linkedin.com/in/oluwanifemi-aweda-2b9206118/)-----**"
-#         )
-
-#     with github:
-#         st.write(
-#             "------------------ ------**[GitHub](https://github.com/Adenife)------**"
-#         )
-
-#     with tableau:
-#         st.write(
-#             "**------------------ ------[Tableau](https://public.tableau.com/app/profile/aweda.oluwanifemi.adeola)-----**"
-#         )
-
-#     with otherColumn3:
-#         st.empty()
-
-#     with otherColumn4:
-#         st.empty()
 
 
 # Projects
